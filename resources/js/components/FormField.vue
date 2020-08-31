@@ -3,7 +3,7 @@ export default {
     data: () => ({
         dependsOnValue: null,
         watcherDebounce: null,
-        watcherDebounceTimeout: 100,
+        watcherDebounceTimeout: 200,
     }),
 
     created() {
@@ -53,9 +53,9 @@ export default {
                 this.dependsOnValue = value;
 
                 this.clearSelection();
-                setTimeout(() => {
+                this.$nextTick(() => {
                     this.initializeComponent();
-                }, 1000)
+                });
 
                 this.watcherDebounce = null;
             }, this.watcherDebounceTimeout);
