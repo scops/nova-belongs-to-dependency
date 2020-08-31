@@ -8,13 +8,13 @@ export default {
 
     created() {
         if (this.field.dependsOn !== undefined) {
-            this.registerDependencyWatchers(this.$root)
+            this.registerDependencyWatchers(this.$root);
         }
     },
 
     beforeDestroy() {
         if (this.watcherDebounce) {
-            clearTimeout(this.watcherDebounce)
+            clearTimeout(this.watcherDebounce);
         }
     },
 
@@ -24,41 +24,41 @@ export default {
                 if (this.componentIsDependency(component)) {
                     if (component.selectedResourceId !== undefined) {
                         // BelongsTo field
-                        component.$watch('selectedResourceId', this.dependencyWatcher, {immediate: true})
-                        this.dependencyWatcher(component.selectedResourceId)
+                        component.$watch('selectedResourceId', this.dependencyWatcher, {immediate: true});
+                        this.dependencyWatcher(component.selectedResourceId);
                     } else if (component.value !== undefined) {
                         // Text based fields
-                        component.$watch('value', this.dependencyWatcher, {immediate: true})
-                        this.dependencyWatcher(component.value)
+                        component.$watch('value', this.dependencyWatcher, {immediate: true});
+                        this.dependencyWatcher(component.value);
                     }
                 }
 
-                this.registerDependencyWatchers(component)
+                this.registerDependencyWatchers(component);
             })
         },
         componentIsDependency(component) {
             if (component.field === undefined) {
-                return false
+                return false;
             }
 
-            return component.field.attribute === this.field.dependsOn
+            return component.field.attribute === this.field.dependsOn;
         },
         dependencyWatcher(value) {
-            clearTimeout(this.watcherDebounce)
+            clearTimeout(this.watcherDebounce);
             this.watcherDebounce = setTimeout(() => {
                 if (value === this.dependsOnValue) {
-                    return
+                    return;
                 }
 
-                this.dependsOnValue = value
+                this.dependsOnValue = value;
 
-                this.clearSelection()
+                this.clearSelection();
                 setTimeout(() => {
-                    this.initializeComponent()
+                    this.initializeComponent();
                 }, 1000)
 
-                this.watcherDebounce = null
-            }, this.watcherDebounceTimeout)
+                this.watcherDebounce = null;
+            }, this.watcherDebounceTimeout);
         },
     },
 
@@ -72,7 +72,7 @@ export default {
                     withTrashed: this.withTrashed,
                     dependsOnValue: this.dependsOnValue,
                 },
-            }
+            };
         },
     },
 }

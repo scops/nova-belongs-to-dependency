@@ -1,5 +1,5 @@
 {
-    "name": "manmohanjit/nova-belongs-to-dependency",
+    "name": "webparking/nova-belongs-to-dependency",
     "description": "Extended Laravel Nova BelongsTo field that can depend on other fields",
     "keywords": [
         "laravel",
@@ -7,17 +7,18 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "laravel/nova": "*"
     },
     "autoload": {
         "psr-4": {
-            "Manmohanjit\\BelongsToDependency\\": "src/"
+            "Webparking\\BelongsToDependency\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Manmohanjit\\BelongsToDependency\\FieldServiceProvider"
+                "Webparking\\BelongsToDependency\\FieldServiceProvider"
             ]
         }
     },

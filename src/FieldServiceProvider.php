@@ -1,6 +1,6 @@
 <?php
 
-namespace Manmohanjit\BelongsToDependency;
+namespace Webparking\BelongsToDependency;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
@@ -16,8 +16,7 @@ class FieldServiceProvider extends ServiceProvider
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('belongs-to-dependency', __DIR__.'/../dist/js/field.js');
-            Nova::style('belongs-to-dependency', __DIR__.'/../dist/css/field.css');
+            Nova::script('belongs-to-dependency', __DIR__ . '/../dist/js/field.js');
         });
     }
 

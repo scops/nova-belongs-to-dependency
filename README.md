@@ -2,12 +2,14 @@
 
 This package is an extension of Laravel Nova's existing BelongsTo field and Vue components.
 
+Originally created by manmohanjit, the original package was abandoned.
+
 ## Installation
 
 You can install this package on a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require manmohanjit/nova-belongs-to-dependency
+composer require webparking/nova-belongs-to-dependency
 ```
 
 ## Usage
@@ -15,7 +17,7 @@ composer require manmohanjit/nova-belongs-to-dependency
 The following will list categories with `type_id` equal to the value set in the first BelongsTo field.
 
 ```php
-use Manmohanjit\BelongsToDependency\BelongsToDependency;
+use Webparking\BelongsToDependency\BelongsToDependency;
 ...
 return [
     ...
@@ -42,7 +44,7 @@ We should only be able to assign categories to posts that belong to the same typ
 This is how you would achieve it on the Nova category resource:
 
 ```php
-use Manmohanjit\BelongsToDependency\BelongsToDependency;
+use Webparking\BelongsToDependency\BelongsToDependency;
 ...
 return [
     ...
@@ -57,7 +59,7 @@ return [
 This would work if you used a text/enum `type` field too.
 
 ```php
-use Manmohanjit\BelongsToDependency\BelongsToDependency;
+use Webparking\BelongsToDependency\BelongsToDependency;
 ...
 return [
     ...
