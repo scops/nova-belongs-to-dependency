@@ -2,14 +2,14 @@
 
 This package is an extension of Laravel Nova's existing BelongsTo field and Vue components.
 
-Originally created by manmohanjit, the original package was abandoned.
+Originally created by manmohanjit, the original package was abandoned. The followed by webparking but I corrected some issues and addedd support for searchable fields.
 
 ## Installation
 
 You can install this package on a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require webparking/nova-belongs-to-dependency
+composer require scops/nova-belongs-to-dependency
 ```
 
 ## Usage
