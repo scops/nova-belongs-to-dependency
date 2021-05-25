@@ -49,10 +49,10 @@ class BelongsToDependency extends BelongsTo
      */
     public function buildAssociatableQuery(NovaRequest $request, $withTrashed = false)
     {
-        $query = parent::buildAssociatableQuery($request, $withTrashed)->toBase();
+        $query = parent::buildAssociatableQuery($request, $withTrashed);
 
         if($request->has('dependsOnValue')) {
-            $query->where($this->meta['dependsOnKey'], $request->dependsOnValue);
+            $query->toBase()->where($this->meta['dependsOnKey'], $request->dependsOnValue);
         }
 
         return $query;
