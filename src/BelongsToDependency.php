@@ -1,6 +1,6 @@
 <?php
 
-namespace Webparking\BelongsToDependency;
+namespace Scops\BelongsToDependency;
 
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
