@@ -17,7 +17,7 @@ composer require scops/nova-belongs-to-dependency
 The following will list categories with `type_id` equal to the value set in the first BelongsTo field.
 
 ```php
-use Webparking\BelongsToDependency\BelongsToDependency;
+use Scops\BelongsToDependency\BelongsToDependency;
 ...
 return [
     ...
@@ -44,7 +44,7 @@ We should only be able to assign categories to posts that belong to the same typ
 This is how you would achieve it on the Nova category resource:
 
 ```php
-use Webparking\BelongsToDependency\BelongsToDependency;
+use Scops\BelongsToDependency\BelongsToDependency;
 ...
 return [
     ...
@@ -59,7 +59,7 @@ return [
 This would work if you used a text/enum `type` field too.
 
 ```php
-use Webparking\BelongsToDependency\BelongsToDependency;
+use Scops\BelongsToDependency\BelongsToDependency;
 ...
 return [
     ...
