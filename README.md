@@ -80,6 +80,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
+- https://github.com/webparking/nova-belongs-to-dependency
+- https://github.com/manmohanjit/nova-belongs-to-dependency
+
 - [nova-belongsto-depend](https://github.com/orlyapps/nova-belongsto-depend) (alternative)
 - [nova-dependency-container](https://github.com/epartment/nova-dependency-container)
 
