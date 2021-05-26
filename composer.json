@@ -1,5 +1,5 @@
 {
-    "name": "webparking/nova-belongs-to-dependency",
+    "name": "scops/nova-belongs-to-dependency",
     "description": "Extended Laravel Nova BelongsTo field that can depend on other fields",
     "keywords": [
         "laravel",
@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Webparking\\BelongsToDependency\\": "src/"
+            "Scops\\BelongsToDependency\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webparking\\BelongsToDependency\\FieldServiceProvider"
+                "Scops\\BelongsToDependency\\FieldServiceProvider"
             ]
         }
     },
