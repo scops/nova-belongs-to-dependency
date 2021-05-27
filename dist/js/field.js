@@ -271,7 +271,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             root.$children.forEach(function (component) {
                 if (_this.componentIsDependency(component)) {
-                    if (component.selectedResourceId !== undefined) {
+                    if (component.selectedResource !== undefined) {
+                        //Searchable BelongsTo field
+                        component.$watch('selectedResource.value', _this.dependencyWatcher, { immediate: true });
+                        _this.dependencyWatcher(component.selectedResourceId);
+                    } else if (component.selectedResourceId !== undefined) {
                         // BelongsTo field
                         component.$watch('selectedResourceId', _this.dependencyWatcher, { immediate: true });
                         _this.dependencyWatcher(component.selectedResourceId);
